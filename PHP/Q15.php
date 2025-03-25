@@ -12,3 +12,30 @@ foreach ($books->book as $book) {
     echo "Price: " . $book->price . "<br><br>";
 }
 ?>
+
+(BOOK.XML)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <bookcode>101</bookcode>
+        <bookname>The Great Gatsby</bookname>
+        <author>F. Scott Fitzgerald</author>
+        <year>1925</year>
+        <price>10.99</price>
+    </book>
+    <book>
+        <bookcode>102</bookcode>
+        <bookname>To Kill a Mockingbird</bookname>
+        <author>Harper Lee</author>
+        <year>1960</year>
+        <price>7.99</price>
+    </book>
+    <book>
+        <bookcode>103</bookcode>
+        <bookname>1984</bookname>
+        <author>George Orwell</author>
+        <year>1949</year>
+        <price>8.99</price>
+    </book>
+</books>
