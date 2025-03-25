@@ -11,11 +11,14 @@ Ans::
 
 <?php
 $xml = new SimpleXMLElement('<Course/>');
-$sybbaca = $xml->addChild('SYBBA CA');
-$sybbaca->addChild('Student name', 'Alice');
-$sybbaca->addChild('Class name', 'SYBBA CA');
-$sybbaca->addChild('percentage', '85');
+
+$student = $xml->addChild('Student');
+$student->addChild('StudentName', 'Alice');
+$student->addChild('ClassName', 'SYBBA_CA');
+$student->addChild('Percentage', '85');
+
 header('Content-type: text/xml');
 echo $xml->asXML();
+
 file_put_contents('Course.xml', $xml->asXML());
 ?>
