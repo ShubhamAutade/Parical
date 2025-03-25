@@ -15,7 +15,8 @@ Save the file with name “CD.xml”.
 Ans::
 
 <?php
-$xml = new SimpleXMLElement('<?xml version="1.0" encoding="ISO-8859-1"?><CATALOG/>');
+$xml = new SimpleXMLElement('<CATALOG/>');
+
 $cd = $xml->addChild('CD');
 $cd->addChild('TITLE', 'Empire Burlesque');
 $cd->addChild('ARTIST', 'Bob Dylan');
@@ -23,7 +24,10 @@ $cd->addChild('COUNTRY', 'USA');
 $cd->addChild('COMPANY', 'Columbia');
 $cd->addChild('PRICE', '10.90');
 $cd->addChild('YEAR', '1985');
+
 header('Content-type: text/xml');
+
 echo $xml->asXML();
+
 file_put_contents('CD.xml', $xml->asXML());
 ?>
